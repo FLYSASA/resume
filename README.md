@@ -38,11 +38,26 @@ npm install normalize --save    //确保在每个浏览器上默认样式一致
 *::after, *::before{box-sizing:border-box;}
 ```
 
-4. App.vue 引入外部css
+4. main.js 引入外部css
 ```js
 import 'normalize.css/normalize.css'
 import './assets/reset.css'
 ```
+
+5. 下载scss
+```
+npm install --save sass-loader node-sass
+```
+
+6. 引入eleme组件
+`npm i element-ui -s`
+在main.js中(新建Vue实例的地方)引入:
+```js
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
+Vue.use(ElementUI)
+````
 
 
 

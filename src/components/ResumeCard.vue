@@ -20,7 +20,7 @@
         <footer>
             <ol class="social">
                 <li v-for="item in icons" class="social-ct">
-                    <a :href="`${item.href}`">
+                    <a :href="`${item.href}`" target="_blank">
                         <svg class="icon">
                             <use :xlink:href="`#icon-${item.icon}`"></use>                     
                         </svg>
@@ -46,12 +46,12 @@ export default {
                 ['年龄','25'],
                 ['所在城市','广东深圳'],
                 ['邮箱','812071523@qq.com'],
-                ['手机','18565889307']
+                ['手机','185-6588-9307']
             ],
             icons: [
-                {icon:'github',href:'www.baidu.com'},
-                {icon:'facebookfacebook52',href:'www.baidu.com'},
-                {icon:'weibo',href:'www.baidu.com'}
+                {icon:'github',href:'http://www.baidu.com' },
+                {icon:'geren2',href:'http://www.flysasa.top'},
+                {icon:'shujijiaocai',href:'https://www.jianshu.com/u/a54c3f82c08a'}
             ]
 
         }

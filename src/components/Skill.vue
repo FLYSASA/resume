@@ -34,12 +34,12 @@ export default {
         title: '技能',
         intro: 'SKILL',
         progress: [
-            {title:'HTML 5 & CSS3',percent:'85',color: '#8e71c7'},
-            {title:'JavaScript',percent:'80',color: '#67c23a'},
-            {title:'jQuery',percent:'80',color: '#409eff'},
-            {title:'Vue',percent:'70',color: '#fed136'},
-            {title:'Node.js',percent:'60',color: '#8e71c7'},
-            {title:'HTTP',percent:'70',color: ''}
+            {title:'HTML 5 & CSS3',percent:85,color: '#8e71c7'},
+            {title:'JavaScript',percent:80,color: '#67c23a'},
+            {title:'jQuery',percent:80,color: '#409eff'},
+            {title:'Vue',percent:70,color: '#fed136'},
+            {title:'Node.js',percent:60,color: '#8e71c7'},
+            {title:'HTTP',percent:70,color: ''}
         ],
         skillIntro: [
             {title: 'HTML/CSS',content: [
@@ -71,22 +71,12 @@ export default {
 #skill{
     margin-top: 45vh;
     background: #eee;
-    .title{
-       text-align: center;
-       h2{
-           font-size: 30px;
-       }
-       p{
-           margin-top: 1vh;
-       }
-    }
     .skill-progress{
         border-radius: 2px;
         background: #fff;
         width: 50%;
         height: 50vh;
         margin: 0 auto;
-        margin-top: 5vh;
         margin-bottom: 5vh;
         padding: 1vh;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.19), 0 6px 20px 0 rgba(0,0,0,0.2);

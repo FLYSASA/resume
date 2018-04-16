@@ -3,6 +3,9 @@
     <Topbar></Topbar>
     <Banner></Banner>
     <Skill></Skill>
+    <Project></Project>
+    <Myblog></Myblog>
+    <Contact></Contact>
   </div>
 </template>
 
@@ -10,10 +13,13 @@
 import Topbar from './components/Topbar'
 import Banner from './components/Banner'
 import Skill from './components/Skill'
+import Project from './components/Project'
+import Myblog from './components/Myblog'
+import Contact from './components/Contact'
 
 export default {
   name: 'App',
-  components: {Topbar,Banner,Skill}
+  components: {Topbar,Banner,Skill,Project,Myblog,Contact}
 }
 </script>
 
@@ -36,5 +42,16 @@ export default {
 }
 section {
   padding: 10vh 0;
+  .title{
+    text-align: center;
+    margin-bottom: 5vh;
+    h2{
+      font-size: 30px;
+    }
+    p{
+      margin-top: 1vh;
+      font-style: italic;
+    }
+  }
 }
 </style>

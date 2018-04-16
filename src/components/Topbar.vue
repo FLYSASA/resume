@@ -4,7 +4,7 @@
         <div class="logo"><a class="name-top" href="#header">MyHOME</a></div>
         <div class="navbar-container">
             <ul class="navbar clearfix">
-                <li><a class="a" href="#about">关于</a></li>
+                <li><a class="a" href="#header">关于</a></li>
                 <li><a class="b" href="#skill">技能</a></li>
                 <li><a class="c" href="#project">项目</a></li>
                 <li><a class="d" href="#blog">博客</a></li>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="resumecard">
     <el-card class="box-card" shadow="hover">
         <div slot="header" class="clearfix">
             <span>个人信息</span>
@@ -25,11 +25,13 @@
                             <use :xlink:href="`#icon-${item.icon}`"></use>                     
                         </svg>
                     </a>
-
                 </li>
             </ol>
         </footer>
-    </el-card>      
+    </el-card>
+    <div class="mypdf">
+        <a class="btn" href="../../static/resume.pdf" download="" >下载 PDF 简历</a>
+    </div> 
   </div>
 </template>
 
@@ -53,7 +55,6 @@ export default {
                 {icon:'geren2',href:'http://www.flysasa.top'},
                 {icon:'shujijiaocai',href:'https://www.jianshu.com/u/a54c3f82c08a'}
             ]
-
         }
         
     }
@@ -154,6 +155,20 @@ export default {
             }
         }
     }
+  }
+  .mypdf{
+      text-align: center;
+      margin-top: 3vh;
+      a {
+          display: inline-block;
+          padding: 1.5vh 1.5vh;
+          border-radius: 2px; 
+          background: #fed136;
+          color: #fff;
+          &:hover{
+              background: #fac60a;
+          }       
+      }
   }
 </style>
 

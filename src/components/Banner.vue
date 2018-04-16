@@ -24,6 +24,7 @@ export default {
     .ct{ 
         width: 100%;
         height: 100%;
+        overflow: auto;
         .banner{
             position: absolute;
             left: 0;
@@ -47,9 +48,8 @@ export default {
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%,10%)
-
-
+            transform: translate(-50%,10%);
+            overflow: hidden;
         }        
     }
 }

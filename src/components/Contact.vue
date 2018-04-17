@@ -9,7 +9,7 @@
               <h2>社交网络</h2>
               <div class="social">
                   <p>QQ: 812071523</p>
-                  <P>Github: https://github.com/FLYSASA?tab=repositories</P>
+                  <P>Github: https://github.com/FLYSASA</P>
                   <p>邮箱: 18565889307@163.com</p>
               </div>
           </div>       

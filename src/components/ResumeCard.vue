@@ -51,7 +51,7 @@ export default {
                 ['手机','185-6588-9307']
             ],
             icons: [
-                {icon:'github',href:'http://www.baidu.com' },
+                {icon:'github',href:'https://github.com/FLYSASA' },
                 {icon:'geren2',href:'http://www.flysasa.top'},
                 {icon:'shujijiaocai',href:'https://www.jianshu.com/u/a54c3f82c08a'}
             ]

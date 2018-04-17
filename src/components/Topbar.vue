@@ -4,7 +4,7 @@
         <div class="logo"><a class="name-top" href="#header">MyHOME</a></div>
         <div class="navbar-container">
             <ul class="navbar clearfix">
-                <li v-for="item in nav"><a :href="item.href" >{{item.content}}</a></li>
+                <li v-for="item in nav"><a :href="item.href" :class="{active: handleScroll === true}">{{item.content}}</a></li>
             </ul>
         </div>
     </section>
@@ -12,8 +12,14 @@
 </template>
 
 <script>
-export default {
+import $ from 'jquery'
 
+export default {
+  created(){
+      let _this = this
+      window.onscroll = _this.handleScroll
+      //或者window.addEventListener('scroll',_this.handleScroll)
+  },
   data(){
       return {
           nav: [
@@ -25,7 +31,12 @@ export default {
           ]
       }
   },
-
+ methods: {
+     handleScroll (){
+         let bannerHeight = document.querySelector('header')
+         console.log(bannerHeight)
+     }
+ }
 }
 </script>
 

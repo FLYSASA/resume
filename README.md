@@ -57,8 +57,28 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.use(ElementUI)
-````
+```
 
+
+
+### 引入jQuery
+1. 安装jQuery依赖:
+```npm install jQuery --save```
+2. 修改配置文件两处地方
+
+![1](https://i.loli.net/2018/04/17/5ad550204b64c.png)
+
+第一处:
+
+![2](https://i.loli.net/2018/04/17/5ad55211dca67.png)
+
+第二处:
+
+![3](https://i.loli.net/2018/04/17/5ad552e0d09d1.png)
+
+3. 直接在需要的组件上引用
+
+![4](https://i.loli.net/2018/04/17/5ad553695127b.png)
 
 
 

@@ -6,6 +6,7 @@
     <Project></Project>
     <Myblog></Myblog>
     <Contact></Contact>
+    <Gotop></Gotop>
   </div>
 </template>
 
@@ -16,10 +17,11 @@ import Skill from './components/Skill'
 import Project from './components/Project'
 import Myblog from './components/Myblog'
 import Contact from './components/Contact'
+import Gotop from './components/Gotop'
 
 export default {
   name: 'App',
-  components: {Topbar,Banner,Skill,Project,Myblog,Contact}
+  components: {Topbar,Banner,Skill,Project,Myblog,Contact,Gotop}
 }
 </script>
 

@@ -81,5 +81,20 @@ Vue.use(ElementUI)
 
 ![4](https://i.loli.net/2018/04/17/5ad553695127b.png)
 
+### vue 的点击事件怎么获取当前点击的元素
+首先 vue的点击事件 是用  @click = “clickfun()” 属性 在html中绑定的
+在点击的函数中 添加$event 参数就可以
+
+比如: 
+```html
+<button  @click = “clickfun($event)”>点击</button>
+methods: {
+    clickfun(e) {
+       // e.target 是你当前点击的元素
+       // e.currentTarget 是你绑定事件的元素
+    }
+}
+```
+
 
 

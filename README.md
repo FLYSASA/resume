@@ -63,7 +63,8 @@ Vue.use(ElementUI)
 
 ### 引入jQuery
 1. 安装jQuery依赖:
-```npm install jQuery --save```
+```npm install jquery --save```
+这步后面可能提示安装`npm install -element-ui` 安装就好了
 2. 修改配置文件两处地方
 
 ![1](https://i.loli.net/2018/04/17/5ad550204b64c.png)

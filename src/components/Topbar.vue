@@ -33,7 +33,7 @@ export default {
   },
  methods: {
      handleScroll (){
-         let bannerHeight = document.querySelector('header')
+         let bannerHeight = $('#header')
          console.log(bannerHeight)
      }
  }

@@ -31,23 +31,23 @@ export default {
         intro: 'MYBLOG',
         card: [
             {
-                href: 'http://www.baidu.com',
+                href: 'http://flysasa.top/',
                 title: 'Flysasa',
                 intro: 'MY BLOG'
             },
             {
-                href: 'http://www.baidu.com',
+                href: 'https://www.jianshu.com/u/a54c3f82c08a',
                 title: 'JianShu',
                 intro: 'Record Knowledge'
             }
         ],
         styleObject: [
             {
-                background: 'url(http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/portfolio/roundicons.png) center center no-repeat',
+                background: 'url(http://p77gvk6sn.bkt.clouddn.com/9%20%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%20%281%29.png) center center no-repeat',
                 'background-size': 'cover'
             },
             {
-                background: 'url(http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/portfolio/roundicons.png) center center no-repeat',
+                background: 'url(http://p77gvk6sn.bkt.clouddn.com/10%20jianshu.png) center center no-repeat',
                 'background-size': 'cover'
             }
         ]

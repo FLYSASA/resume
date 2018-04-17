@@ -25,6 +25,8 @@
               </li>
           </ul>
       </div>
+
+      <div class="address"><a href="https://github.com/FLYSASA/project" target="_blank">项目源码地址</a></div>
   </section>
 </template>
 
@@ -39,22 +41,22 @@ export default {
             {
                 href: 'http://flysasa.top/project/3%20vue.js%E9%A1%B9%E7%9B%AE/6-vue-Resume-editor/dist/#/',
                 title: 'Resume Editor',
-                intro: '基于 Vue + Vuex + Vue-cli + webpack 搭建的在线简历编辑器'
+                intro: '基于 Vue + Vuex +  webpack 搭建的在线简历编辑器'
             },
             {
                 href: 'http://flysasa.top/project/1%20My-player/index.html',
-                title: 'Round Icons',
-                intro: 'Graphic Design'
+                title: 'My-MusicPlayer',
+                intro: '使用原生 js 实现一个 音乐播放器，涉及的知识：html5 Audo API的使用、组件化思路、ajax、跨域、响应式媒体查询等。 '
             },
             {
-                href: 'http://www.baidu.com',
-                title: 'Round Icons',
-                intro: 'Graphic Design'
+                href: 'http://flysasa.top/project/2%20%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96%E9%A1%B9%E7%9B%AE/demo_requireJs/www/index.html',
+                title: 'Homepage',
+                intro: '使用require js 实现一个html5主页，涉及的知识：各种组件(首屏轮播组件、回到顶部组件、瀑布流ajax获取新闻组件)封装,组件化思路、ajax、跨域、requirejs。'
             },
             {
-                href: 'http://www.baidu.com',
-                title: 'Round Icons',
-                intro: 'Graphic Design'
+                href: 'http://flysasa.top/project/4%20Shopping%20Mall/index.html',
+                title: 'Shopping Mall',
+                intro: '使用 jQuery 实现的一个商城主页,涉及的知识: 使用 jQuery 实现的一个商城主页,涉及的知识: 轮播、动画、Tab切换等'
             }
         ],
         styleObject: [
@@ -63,15 +65,15 @@ export default {
                 'background-size': 'cover'
             },
             {
-                background: 'url(http://p77gvk6sn.bkt.clouddn.com/myplayer.gif) center center no-repeat',
+                background: 'url(http://p77gvk6sn.bkt.clouddn.com/20180417150956.gif) center center no-repeat',
                 'background-size': 'cover'
             },
             {
-                background: 'url(http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/portfolio/roundicons.png) center center no-repeat',
+                background: 'url(http://p77gvk6sn.bkt.clouddn.com/20180417152616.gif) center center no-repeat',
                 'background-size': 'cover'
             },
             {
-                background: 'url(http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/portfolio/roundicons.png) center center no-repeat',
+                background: 'url(http://p77gvk6sn.bkt.clouddn.com/20180417161952.gif) center center no-repeat',
                 'background-size': 'cover'
             }
         ]
@@ -137,6 +139,8 @@ export default {
                 }
             }
             .text-center-head{
+                width: 30vh;
+                margin: 0 auto;
                 color: #000;
                 margin-top: 3vh;
                 font-size: 25px;
@@ -147,10 +151,17 @@ export default {
                 margin: 0 auto;
                 color: #aaa;
                 font-style: italic;
-                margin-bottom: 3vh;
+                padding-bottom: 2vh;
             }
         }
     }
+}
+.address{
+    font-size: 2vh;
+    text-align: center;
+    text-decoration: underline;
+    color: #e6e6e6;
+    font-style: italic;
 }
 </style>
 

@@ -3,8 +3,8 @@
     <section id="bootstrap">	 
         <div class="logo"><a class="name-top" href="#header">MyHOME</a></div>
         <div class="navbar-container">
-            <ul class="navbar clearfix">
-                <li v-for="item in nav"><a :href="item.href" :class="{active: handleScroll === true}">{{item.content}}</a></li>
+            <ul class="navbar">
+                <li v-for="item in nav"><a :href="item.href" >{{item.content}}</a></li>
             </ul>
         </div>
     </section>
@@ -17,15 +17,15 @@ import $ from 'jquery'
 export default {
   created(){
       let _this = this
-      window.onscroll = _this.handleScroll
+      window.onscroll = _this.handleScroll  //因为window事件内this会变为window所以需要替换
       //或者window.addEventListener('scroll',_this.handleScroll)
   },
   data(){
       return {
           nav: [
               {href:'#header',content: '关于'},
-              {href:'#project',content: '项目'},
               {href:'#skill',content: '技能'},
+              {href:'#project',content: '项目'},            
               {href:'#myblog',content: '个人博客'},
               {href:'#contact',content: '联系方式'},
           ]
@@ -33,8 +33,33 @@ export default {
   },
  methods: {
      handleScroll (){
-         let bannerHeight = $('#header')
-         console.log(bannerHeight)
+         let bannerHeight = $('#header').outerHeight()
+         let skillHeight = $('#skill').outerHeight()
+         let projectHeight = $('#project').outerHeight()
+         let myblogHeight = $('#myblog').outerHeight()
+         let contactHeight = $('#contact').outerHeight()
+         let scrollTop = $(window).scrollTop()
+
+         if(scrollTop < bannerHeight){
+             var $a1 = $('.navbar li:nth-child(1) a')
+             $a1.addClass('active').parent('li').siblings().children('a').removeClass('active')
+         }
+         if(scrollTop > bannerHeight){
+             var $a2 = $('.navbar li:nth-child(2) a')
+             $a2.addClass('active').parent('li').siblings().children('a').removeClass('active')
+         }
+         if(scrollTop > bannerHeight+skillHeight){
+             var $a3 = $('.navbar li:nth-child(3) a')
+             $a3.addClass('active').parent('li').siblings().children('a').removeClass('active')
+         }
+         if(scrollTop > bannerHeight+skillHeight+projectHeight){
+             var $a4 = $('.navbar li:nth-child(4) a')
+             $a4.addClass('active').parent('li').siblings().children('a').removeClass('active')
+         }
+         if(scrollTop > bannerHeight+skillHeight+projectHeight+myblogHeight){
+             var $a5 = $('.navbar li:nth-child(5) a')
+             $a5.addClass('active').parent('li').siblings().children('a').removeClass('active')
+         }
      }
  }
 }

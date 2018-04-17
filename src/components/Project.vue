@@ -1,7 +1,7 @@
 <template>
-  <section id="project">
+  <section id="project"  >
       <div class="title">
-          <h2>{{title}}</h2>
+          <h2 >{{title}}</h2>
           <p>{{intro}}</p>
       </div>
 
@@ -37,12 +37,12 @@ export default {
         intro: 'PROJECTS',
         card: [
             {
-                href: 'http://www.baidu.com',
-                title: 'Round Icons',
-                intro: 'Graphic Design'
+                href: 'http://flysasa.top/project/3%20vue.js%E9%A1%B9%E7%9B%AE/6-vue-Resume-editor/dist/#/',
+                title: 'Resume Editor',
+                intro: '基于 Vue + Vuex + Vue-cli + webpack 搭建的在线简历编辑器'
             },
             {
-                href: 'http://www.baidu.com',
+                href: 'http://flysasa.top/project/1%20My-player/index.html',
                 title: 'Round Icons',
                 intro: 'Graphic Design'
             },
@@ -59,11 +59,11 @@ export default {
         ],
         styleObject: [
             {
-                background: 'url(http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/portfolio/roundicons.png) center center no-repeat',
+                background: 'url(http://p77gvk6sn.bkt.clouddn.com/resume-editor.png) center center no-repeat',
                 'background-size': 'cover'
             },
             {
-                background: 'url(http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/portfolio/roundicons.png) center center no-repeat',
+                background: 'url(http://p77gvk6sn.bkt.clouddn.com/myplayer.gif) center center no-repeat',
                 'background-size': 'cover'
             },
             {
@@ -77,7 +77,7 @@ export default {
         ]
 
       }
-  }
+  },
 }
 </script>
 
@@ -90,13 +90,14 @@ export default {
 }
 .pro-ct{
     text-align: center;
-    .ct-card{
+    .ct-card{      
         max-width: 110vh;
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         .card{
+            border: 1px solid;
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.19), 0 6px 20px 0 rgba(0,0,0,0.2);
             background: #fff;
             margin-bottom: 5vh;
@@ -142,6 +143,8 @@ export default {
                 opacity: .8;
             }
             .text-center-content{
+                width: 30vh;
+                margin: 0 auto;
                 color: #aaa;
                 font-style: italic;
                 margin-bottom: 3vh;

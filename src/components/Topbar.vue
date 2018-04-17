@@ -4,7 +4,7 @@
         <div class="logo"><a class="name-top" href="#header">MyHOME</a></div>
         <div class="navbar-container">
             <ul class="navbar clearfix">
-                <li v-for="item in nav"><a :href="item.href">{{item.content}}</a></li>
+                <li v-for="item in nav"><a :href="item.href" >{{item.content}}</a></li>
             </ul>
         </div>
     </section>
@@ -13,16 +13,19 @@
 
 <script>
 export default {
+
   data(){
       return {
           nav: [
               {href:'#header',content: '关于'},
               {href:'#project',content: '项目'},
+              {href:'#skill',content: '技能'},
               {href:'#myblog',content: '个人博客'},
               {href:'#contact',content: '联系方式'},
           ]
       }
-  }
+  },
+
 }
 </script>
 
@@ -64,6 +67,10 @@ export default {
             padding: 10px;
             font-size: 16px;
             font-weight: 300;
+            &.active{
+                color: #fed136;
+                border-bottom: 4px solid #fed136;
+            }
             &:hover{
                 color: #fed136;
             }

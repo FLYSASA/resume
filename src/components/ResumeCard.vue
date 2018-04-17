@@ -77,17 +77,22 @@ export default {
     content: "";
   }
   .clearfix:after {
-    clear: both
+    clear: both;
   }
 
 //自定义card样式
   .box-card {
     width: 100vh;
     position: relative;
+    @media(max-width: 450px){
+        width: 55vh;
+    }
     .layout{
         width: 100%;
         height: 40vh;
         display: flex;
+        @media(max-width: 450px){
+        }
         .imgct{
             width: 35%;
             flex-shrink: 0;   //不被压扁
@@ -98,6 +103,10 @@ export default {
                 border-radius: 50%;
                 background: url(http://p77gvk6sn.bkt.clouddn.com/my-avatar.jpg) center center no-repeat no-repeat;
                 background-size: cover; 
+                @media(max-width: 450px){
+                    width: 15vh;
+                    height: 15vh;
+                }
             }
         }
         .content{
@@ -128,7 +137,11 @@ export default {
                     td:first-child{
                         font-weight: 800;
                         padding-right: 10vh;
-                     }
+                        @media(max-width: 450px){
+                            padding-right: 2vh;
+                         }
+                    }
+                    
                 }              
             }
         }

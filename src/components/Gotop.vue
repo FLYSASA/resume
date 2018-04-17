@@ -45,5 +45,11 @@ export default {
     &:hover{
         background-color: #f7c71b;
     }
+    @media(max-width: 450px){
+        width: 40px;
+        font-size: 5px;
+        padding: 15px 2px;
+        right: 1vh;
+    }
 }
 </style>

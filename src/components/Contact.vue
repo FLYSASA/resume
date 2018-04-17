@@ -35,7 +35,7 @@ export default {
         background: #404040;
         color: #e6e6e6;
         main{
-            width: 100vh;
+            max-width: 100vh;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;

@@ -80,21 +80,26 @@ export default {
         margin-bottom: 5vh;
         padding: 1vh;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.19), 0 6px 20px 0 rgba(0,0,0,0.2);
+        @media(max-width: 450px){
+            width: 80%;
+        }
         .chart{
             height: 100%;
             display: flex;
             justify-content: space-around;
             align-items: center;
-            flex-wrap: wrap;
+            flex-wrap: wrap;          
             li{
-                width: 30vh;
+                width: 30vh;                
             }
         }
     }
     .intro{
         width: 50%;
         margin: 0 auto;
- 
+        @media(max-width: 450px){
+            width: 80%;
+        }
         .cate{
             .content{
                 margin-top: 5vh;

@@ -96,5 +96,18 @@ methods: {
 }
 ```
 
+### 解决本地css url图片显示正常,放在githubpage无法显示的bug: 
+步骤: 
+1. 在 `config/index.js` 中修改 `assetsPublicPath` 为 `./`
+2. 在 `build/utils.js` 中的 `ExtractTextPlugin.extract` 传入参数 `publicPath: '../../'`
+
+重新build上传
+
+完美解决本地和服务器上资源url解析的问题
+
+参考: https://my.oschina.net/u/1778998/blog/1609856
+
+
+
 
 

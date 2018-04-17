@@ -53,7 +53,7 @@ export default {
             .wechat{              
                 width: 25vh;
                 height: 25vh;
-                background: url(../assets/wechat.png) center center no-repeat no-repeat;
+                background: url('../assets/wechat.png') center center no-repeat no-repeat;
                 background-size: cover;
             }
         }

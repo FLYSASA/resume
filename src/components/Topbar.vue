@@ -10,7 +10,7 @@
 
         <div class="navbar-container">          
             <ul class="navbar">
-                <li v-for="(item,index) in nav"><a :href="item.href" >{{item.content}}</a></li>
+                <li v-for="(item,index) in nav"><a :href="item.href" :class="{active:index===current}">{{item.content}}</a></li>
             </ul>
         </div>
     </section>
@@ -31,7 +31,7 @@ export default {
                 {href:'#contact',content: '联系方式'},
             ],
             shownav: false,
-            current: 0
+            current: 0,
         }
     },
     //html都渲染后了之后触发
@@ -50,33 +50,64 @@ export default {
             }
         },
         handleScroll (){
-            let bannerHeight = $('#header').outerHeight()
-            let skillHeight = $('#skill').outerHeight()
-            let projectHeight = $('#project').outerHeight()
-            let myblogHeight = $('#myblog').outerHeight()
-            let contactHeight = $('#contact').outerHeight()
-            let scrollTop = $(window).scrollTop()
+            //jQuery获取高度
+            var scrollTop = $(window).scrollTop()  //滚动的高度
+            var bannerHeight = $('#header').outerHeight()  
+            var skillHeight = $('#skill').outerHeight()
+            var projectHeight = $('#project').outerHeight()
+            var myblogHeight = $('#myblog').outerHeight()
             
+            //原生获取高度
+            //var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop   //记得没有括号
+            //var offsetSkill = document.querySelector('#sskill').offsetTop
+            //var windowHeight = window.height  //视窗高
+
             if(scrollTop < bannerHeight){
-                var $a1 = $('.navbar li:nth-child(1) a')
-                $a1.addClass('active').parent('li').siblings().children('a').removeClass('active')
+                this.current = 0
             }
-            if(scrollTop > bannerHeight){
-                var $a2 = $('.navbar li:nth-child(2) a')
-                $a2.addClass('active').parent('li').siblings().children('a').removeClass('active')
+            if( bannerHeight < scrollTop){
+                this.current = 1
             }
-            if(scrollTop > bannerHeight+skillHeight){
-                var $a3 = $('.navbar li:nth-child(3) a')
-                $a3.addClass('active').parent('li').siblings().children('a').removeClass('active')
+            if(bannerHeight+skillHeight < scrollTop){
+                this.current = 2
             }
-            if(scrollTop > bannerHeight+skillHeight+projectHeight){
-                var $a4 = $('.navbar li:nth-child(4) a')
-                $a4.addClass('active').parent('li').siblings().children('a').removeClass('active')
+            if(bannerHeight+skillHeight+projectHeight < scrollTop){
+                this.current = 3
             }
-            if(scrollTop > bannerHeight+skillHeight+projectHeight+myblogHeight){
-                var $a5 = $('.navbar li:nth-child(5) a')
-                $a5.addClass('active').parent('li').siblings().children('a').removeClass('active')
+            if(bannerHeight+skillHeight+projectHeight+myblogHeight < scrollTop){
+                this.current = 4
             }
+            
+
+            //jQuery实现
+
+            // let bannerHeight = $('#header').outerHeight()
+            // let skillHeight = $('#skill').outerHeight()
+            // let projectHeight = $('#project').outerHeight()
+            // let myblogHeight = $('#myblog').outerHeight()
+            // let contactHeight = $('#contact').outerHeight()
+            // let scrollTop = $(window).scrollTop()
+            
+            // if(scrollTop < bannerHeight){
+            //     var $a1 = $('.navbar li:nth-child(1) a')
+            //     $a1.addClass('active').parent('li').siblings().children('a').removeClass('active')
+            // }
+            // if(scrollTop > bannerHeight){
+            //     var $a2 = $('.navbar li:nth-child(2) a')
+            //     $a2.addClass('active').parent('li').siblings().children('a').removeClass('active')
+            // }
+            // if(scrollTop > bannerHeight+skillHeight){
+            //     var $a3 = $('.navbar li:nth-child(3) a')
+            //     $a3.addClass('active').parent('li').siblings().children('a').removeClass('active')
+            // }
+            // if(scrollTop > bannerHeight+skillHeight+projectHeight){
+            //     var $a4 = $('.navbar li:nth-child(4) a')
+            //     $a4.addClass('active').parent('li').siblings().children('a').removeClass('active')
+            // }
+            // if(scrollTop > bannerHeight+skillHeight+projectHeight+myblogHeight){
+            //     var $a5 = $('.navbar li:nth-child(5) a')
+            //     $a5.addClass('active').parent('li').siblings().children('a').removeClass('active')
+            // }
         }
     }
 }
@@ -127,6 +158,7 @@ export default {
             color: #fff;
             &.active{
                 color: #fed136;
+                border-bottom: 1px solid #fed136;
             }
         }
     }            

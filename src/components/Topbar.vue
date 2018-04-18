@@ -5,12 +5,12 @@
         <!-- mobile 样式 -->
         <button id="menu" @click="navClick">Menu</button>
         <ul class="navbar1" v-if="shownav">
-           <li v-for="item in nav" ><a :href="item.href" >{{item.content}}</a></li>
+           <li v-for="(item,index) in nav" ><a :href="item.href" :class="{active:index===current}"  @click="current = index">{{item.content}}</a></li>
         </ul>
 
         <div class="navbar-container">          
             <ul class="navbar">
-                <li v-for="item in nav"><a :href="item.href" >{{item.content}}</a></li>
+                <li v-for="(item,index) in nav"><a :href="item.href" >{{item.content}}</a></li>
             </ul>
         </div>
     </section>
@@ -21,62 +21,64 @@
 import $ from 'jquery'
 
 export default {
-  data(){
-      return {
-          nav: [
-              {href:'#header',content: '关于'},
-              {href:'#skill',content: '技能'},
-              {href:'#project',content: '项目'},            
-              {href:'#myblog',content: '个人博客'},
-              {href:'#contact',content: '联系方式'},
-          ],
-          shownav: false
-      }
-  },
- methods: {
-     navClick(){
-         if(this.shownav === false){
-             this.shownav = true
-         }else{
-             this.shownav = false
-         }
-     },
-     //html都渲染后了之后触发
-     mounted(){ 
-      let _this = this
-      window.onscroll = _this.handleScroll  //因为window事件内this会变为window所以需要替换
-      //或者window.addEventListener('scroll',_this.handleScroll)
-     },
-     handleScroll (){
-         let bannerHeight = $('#header').outerHeight()
-         let skillHeight = $('#skill').outerHeight()
-         let projectHeight = $('#project').outerHeight()
-         let myblogHeight = $('#myblog').outerHeight()
-         let contactHeight = $('#contact').outerHeight()
-         let scrollTop = $(window).scrollTop()
-         
-         if(scrollTop < bannerHeight){
-             var $a1 = $('.navbar li:nth-child(1) a')
-             $a1.addClass('active').parent('li').siblings().children('a').removeClass('active')
-         }
-         if(scrollTop > bannerHeight){
-             var $a2 = $('.navbar li:nth-child(2) a')
-             $a2.addClass('active').parent('li').siblings().children('a').removeClass('active')
-         }
-         if(scrollTop > bannerHeight+skillHeight){
-             var $a3 = $('.navbar li:nth-child(3) a')
-             $a3.addClass('active').parent('li').siblings().children('a').removeClass('active')
-         }
-         if(scrollTop > bannerHeight+skillHeight+projectHeight){
-             var $a4 = $('.navbar li:nth-child(4) a')
-             $a4.addClass('active').parent('li').siblings().children('a').removeClass('active')
-         }
-         if(scrollTop > bannerHeight+skillHeight+projectHeight+myblogHeight){
-             var $a5 = $('.navbar li:nth-child(5) a')
-             $a5.addClass('active').parent('li').siblings().children('a').removeClass('active')
-         }
-     }
- }
+    data(){
+        return {
+            nav: [
+                {href:'#header',content: '关于'},
+                {href:'#skill',content: '技能'},
+                {href:'#project',content: '项目'},            
+                {href:'#myblog',content: '个人博客'},
+                {href:'#contact',content: '联系方式'},
+            ],
+            shownav: false,
+            current: 0
+        }
+    },
+    //html都渲染后了之后触发
+    mounted(){ 
+            let _this = this
+            window.onscroll = _this.handleScroll  //因为window事件内this会变为window所以需要替换
+            //或者window.addEventListener('scroll',_this.handleScroll)
+    },
+
+    methods: {
+        navClick(){
+            if(this.shownav === false){
+                this.shownav = true
+            }else{
+                this.shownav = false
+            }
+        },
+        handleScroll (){
+            let bannerHeight = $('#header').outerHeight()
+            let skillHeight = $('#skill').outerHeight()
+            let projectHeight = $('#project').outerHeight()
+            let myblogHeight = $('#myblog').outerHeight()
+            let contactHeight = $('#contact').outerHeight()
+            let scrollTop = $(window).scrollTop()
+            
+            if(scrollTop < bannerHeight){
+                var $a1 = $('.navbar li:nth-child(1) a')
+                $a1.addClass('active').parent('li').siblings().children('a').removeClass('active')
+            }
+            if(scrollTop > bannerHeight){
+                var $a2 = $('.navbar li:nth-child(2) a')
+                $a2.addClass('active').parent('li').siblings().children('a').removeClass('active')
+            }
+            if(scrollTop > bannerHeight+skillHeight){
+                var $a3 = $('.navbar li:nth-child(3) a')
+                $a3.addClass('active').parent('li').siblings().children('a').removeClass('active')
+            }
+            if(scrollTop > bannerHeight+skillHeight+projectHeight){
+                var $a4 = $('.navbar li:nth-child(4) a')
+                $a4.addClass('active').parent('li').siblings().children('a').removeClass('active')
+            }
+            if(scrollTop > bannerHeight+skillHeight+projectHeight+myblogHeight){
+                var $a5 = $('.navbar li:nth-child(5) a')
+                $a5.addClass('active').parent('li').siblings().children('a').removeClass('active')
+            }
+        }
+    }
 }
 </script>
 
@@ -123,6 +125,9 @@ export default {
         a{
             font-size: 14px;
             color: #fff;
+            &.active{
+                color: #fed136;
+            }
         }
     }            
     .navbar{

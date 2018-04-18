@@ -66,6 +66,9 @@ export default {
         left: 50%;
         transform: translate(-50%,-50%);
         font-size: 5vh;
+        @media(max-width: 450px){
+            display: none;
+        }
     }
     .ct-card{
         max-width: 110vh;

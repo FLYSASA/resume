@@ -56,7 +56,7 @@ export default {
             {
                 href: 'http://flysasa.top/project/4%20Shopping%20Mall/index.html',
                 title: 'Shopping Mall',
-                intro: '使用 jQuery 实现的一个商城主页,涉及的知识: 使用 jQuery 实现的一个商城主页,涉及的知识: 轮播、动画、Tab切换等'
+                intro: '使用 jQuery 实现的一个商城主页,涉及的知识: 轮播、动画、Tab切换等'
             }
         ],
         styleObject: [

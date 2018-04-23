@@ -30,7 +30,7 @@
         </footer>
     </el-card>
     <div class="mypdf">
-        <a class="btn" href="../assets/resume.pdf" download="" >下载 PDF 简历</a>
+        <a class="btn" href="./static/resume.pdf" download="" >下载 PDF 简历</a>
     </div> 
   </div>
 </template>
